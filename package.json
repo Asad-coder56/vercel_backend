@@ -1,0 +1,35 @@
+{
+  "name": "workbay-backend",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.1077.0",
+    "@aws-sdk/client-sesv2": "^3.1077.0",
+    "@getbrevo/brevo": "^6.0.2",
+    "@sendgrid/mail": "^8.1.6",
+    "authorizenet": "^1.0.10",
+    "axios": "^1.18.0",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "~1.4.4",
+    "csv-parser": "^3.2.0",
+    "debug": "~2.6.9",
+    "dotenv": "^17.2.3",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "~1.9.1",
+    "multer": "^2.0.2",
+    "mysql2": "^3.15.3",
+    "node-cache": "^5.1.2",
+    "nodemailer": "^7.0.11",
+    "nodemon": "^3.1.11",
+    "sequelize": "^6.37.7",
+    "sequelize-cli": "^6.6.3",
+    "xlsx": "^0.18.5"
+  }
+}
