@@ -2,9 +2,7 @@
   "version": 2,
   "functions": {
     "api/index.js": {
-      "includeFiles": [
-        "node_modules/mysql2/**"
-      ]
+      "includeFiles": "node_modules/mysql2/**"
     }
   }
 }
