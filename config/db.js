@@ -1,4 +1,5 @@
 const { Sequelize } = require("sequelize");
+const mysql2 = require("mysql2");
 require("dotenv").config();
 
 const sequelize = new Sequelize({
@@ -8,6 +9,7 @@ const sequelize = new Sequelize({
     password: process.env.DB_PASSWORD,
     database: process.env.DB_NAME,
     dialect: "mysql",
+    dialectModule: mysql2,
     pool: {
         max: Number(process.env.DB_POOL_MAX || 10),
         min: 0,
