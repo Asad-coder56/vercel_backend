@@ -2,12 +2,17 @@ const { Sequelize } = require("sequelize");
 const mysql2 = require("mysql2");
 require("dotenv").config();
 
+const cleanEnvValue = (value) => {
+    if (!value) return value;
+    return value.replace(/^(['"])(.*)\1$/, "$2").trim();
+};
+
 const sequelize = new Sequelize({
-    host: process.env.DB_HOST,
-    port: Number(process.env.DB_PORT || 3306),
-    username: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
+    host: cleanEnvValue(process.env.DB_HOST),
+    port: Number(cleanEnvValue(process.env.DB_PORT) || 3306),
+    username: cleanEnvValue(process.env.DB_USER),
+    password: cleanEnvValue(process.env.DB_PASSWORD),
+    database: cleanEnvValue(process.env.DB_NAME),
     dialect: "mysql",
     dialectModule: mysql2,
     pool: {
