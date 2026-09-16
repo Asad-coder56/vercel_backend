@@ -55,6 +55,15 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/api", (req, res) => {
+    res.json({
+        success: true,
+        message: "Welcome to TruNorth Backend API",
+        version: "1.0.0",
+        status: "running"
+    });
+});
+
 // Original routes
 app.use("/api", indexRouter);
 
